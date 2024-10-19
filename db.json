@@ -1,0 +1,44 @@
+{
+  "todos": [
+    {
+      "id": "6",
+      "title": "Find new music for my playlist",
+      "completed": false
+    },
+    {
+      "id": "8",
+      "title": "Купить машину срочно",
+      "completed": true
+    },
+    {
+      "id": "9",
+      "title": "Написать приложение с поиском",
+      "completed": true
+    },
+    {
+      "id": "2367",
+      "title": "Альфа банк",
+      "completed": false
+    },
+    {
+      "id": "520c",
+      "title": "Яндекс такси",
+      "completed": false
+    },
+    {
+      "id": "ddfb",
+      "title": "Бетон заказать",
+      "completed": false
+    },
+    {
+      "id": "9220",
+      "title": "Make Africa Great Again!",
+      "completed": false
+    },
+    {
+      "id": "5c70",
+      "title": "Новая",
+      "completed": false
+    }
+  ]
+}
