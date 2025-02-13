@@ -8,7 +8,7 @@ export const TodoItem = () => {
 	const { id } = useParams();
 	const navigate = useNavigate();
 	const [todo, setTodo] = useState(null);
-	const [loading, setLoading] = useState(true);
+	const [loading, setLoading] = useState(true); // Состояние загрузки
 	const [error, setError] = useState(false);
 
 	useEffect(() => {
@@ -16,6 +16,7 @@ export const TodoItem = () => {
 			try {
 				const response = await fetch(`${API_URL}/${id}`);
 				if (!response.ok) {
+					// Если задача не найдена, устанавливаем состояние ошибки
 					setError(true);
 					return;
 				}
@@ -23,9 +24,9 @@ export const TodoItem = () => {
 				setTodo(data);
 			} catch (err) {
 				console.error('Ошибка при загрузке задачи:', err);
-				setError(true);
+				setError(true); // Устанавливаем состояние ошибки при возникновении исключения
 			} finally {
-				setLoading(false);
+				setLoading(false); // Устанавливаем состояние загрузки в false
 			}
 		};
 
@@ -52,8 +53,8 @@ export const TodoItem = () => {
 	if (loading) return <div className={styles.loader}></div>;
 
 	if (error) {
-		navigate('/not-found');
-		return null;
+		navigate('/not-found'); // Перенаправляем на страницу 404, если произошла ошибка
+		return null; // Возвращаем null, чтобы ничего не рендерить
 	}
 
 	return (
